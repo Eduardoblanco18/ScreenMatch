@@ -5,7 +5,11 @@ public class Principal {
         filme1.anoDeLancamento = 1972;
         filme1.duraçaoEmMinutos = 175;
 
-        System.out.println(filme1.nome);
-        System.out.println(filme1.anoDeLancamento);
+        filme1.exibeFichaTecnica();
+        filme1.avalia(8);
+        filme1.avalia(5);
+        filme1.avalia(10);
+
+        System.out.println("A média das avaliações é " + filme1.pegaMedia());
     }
 }
