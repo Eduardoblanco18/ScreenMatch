@@ -1,12 +1,28 @@
 package br.com.screenmatch.modelos;
 
 public class Filme {
-    String nome;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvalicaoes;
-    int duraçaoEmMinutos;
+    private int duracaoEmMinutos;
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
 
     public int getTotalDeAvalicaoes(){
         return totalDeAvalicaoes;
@@ -15,6 +31,8 @@ public class Filme {
     public void exibeFichaTecnica(){
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Tempo de duração: " + duracaoEmMinutos);
+        System.out.println("O filme está incluido no plano: " + incluidoNoPlano);
     }
     
     public void avalia(double nota){
