@@ -28,6 +28,22 @@ public class Titulo {
         return totalDeAvalicaoes;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
     public void exibeFichaTecnica(){
         System.out.println("Nome do título: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);

@@ -23,5 +23,7 @@ public class Principal {
         serie1.exibeFichaTecnica();
         serie1.setTemporadas(6);
         serie1.setEpisodiosPorTemporada(15);
+        serie1.setMinutosPorEpisodio(45);
+        System.out.println("Duração para maratonar " + serie1.getNome() + ": " + serie1.getDuracaoEmMinutos());
     }
 }
