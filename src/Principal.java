@@ -1,4 +1,5 @@
 import br.com.screenmatch.modelos.Filme;
+import br.com.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -15,5 +16,12 @@ public class Principal {
 
         System.out.println("A média das avaliações é " + filme1.pegaMedia());
         System.out.println("Total de avaliações: " + filme1.getTotalDeAvalicaoes());
+
+        Serie serie1 = new Serie();
+        serie1.setNome("Lost");
+        serie1.setAnoDeLancamento(2004);
+        serie1.exibeFichaTecnica();
+        serie1.setTemporadas(6);
+        serie1.setEpisodiosPorTemporada(15);
     }
 }

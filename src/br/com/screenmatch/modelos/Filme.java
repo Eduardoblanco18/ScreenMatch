@@ -1,46 +1,13 @@
 package br.com.screenmatch.modelos;
 
-public class Filme {
-    private String nome;
-    private int anoDeLancamento;
-    private boolean incluidoNoPlano;
-    private double somaDasAvaliacoes;
-    private int totalDeAvalicaoes;
-    private int duracaoEmMinutos;
+public class Filme extends Titulo {
+    private String director;
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getDirector() {
+        return director;
     }
 
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
-    }
-
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
-    }
-
-    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
-        this.incluidoNoPlano = incluidoNoPlano;
-    }
-
-    public int getTotalDeAvalicaoes(){
-        return totalDeAvalicaoes;
-    }
-
-    public void exibeFichaTecnica(){
-        System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lançamento: " + anoDeLancamento);
-        System.out.println("Tempo de duração: " + duracaoEmMinutos);
-        System.out.println("O filme está incluido no plano: " + incluidoNoPlano);
-    }
-    
-    public void avalia(double nota){
-        somaDasAvaliacoes += nota;
-        totalDeAvalicaoes++;
-    }
-
-    public double pegaMedia(){
-        return somaDasAvaliacoes / totalDeAvalicaoes;
+    public void setDirector(String director) {
+        this.director = director;
     }
 }
