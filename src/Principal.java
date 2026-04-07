@@ -11,5 +11,6 @@ public class Principal {
         filme1.avalia(10);
 
         System.out.println("A média das avaliações é " + filme1.pegaMedia());
+        System.out.println("Total de avaliações: " + filme1.getTotalDeAvalicaoes());
     }
 }
