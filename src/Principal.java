@@ -1,4 +1,6 @@
 import br.com.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.screenmatch.calculos.FiltroRecomendacao;
+import br.com.screenmatch.modelos.Episodio;
 import br.com.screenmatch.modelos.Filme;
 import br.com.screenmatch.modelos.Serie;
 
@@ -18,14 +20,14 @@ public class Principal {
         System.out.println("A média das avaliações é " + meuFilme.pegaMedia());
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvalicaoes());
 
-        Serie serie1 = new Serie();
-        serie1.setNome("Lost");
-        serie1.setAnoDeLancamento(2004);
-        serie1.exibeFichaTecnica();
-        serie1.setTemporadas(6);
-        serie1.setEpisodiosPorTemporada(15);
-        serie1.setMinutosPorEpisodio(45);
-        System.out.println("Duração para maratonar " + serie1.getNome() + ": " + serie1.getDuracaoEmMinutos());
+        Serie minhaSerie = new Serie();
+        minhaSerie.setNome("Lost");
+        minhaSerie.setAnoDeLancamento(2004);
+        minhaSerie.exibeFichaTecnica();
+        minhaSerie.setTemporadas(6);
+        minhaSerie.setEpisodiosPorTemporada(15);
+        minhaSerie.setMinutosPorEpisodio(45);
+        System.out.println("Duração para maratonar " + minhaSerie.getNome() + ": " + minhaSerie.getDuracaoEmMinutos());
 
         Filme outroFilme = new Filme();
         outroFilme.setNome("Avatar");
@@ -35,7 +37,16 @@ public class Principal {
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
-        calculadora.inclui(serie1);
+        calculadora.inclui(minhaSerie);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(minhaSerie);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
