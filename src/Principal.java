@@ -5,11 +5,11 @@ import br.com.screenmatch.modelos.Filme;
 import br.com.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
+        Filme meuFilme = new Filme("O Poderoso Chefão");
         meuFilme.setAnoDeLancamento(1972);
         meuFilme.setDuracaoEmMinutos(175);
         meuFilme.setIncluidoNoPlano(true);
@@ -31,8 +31,7 @@ public class Principal {
         minhaSerie.setMinutosPorEpisodio(45);
         System.out.println("Duração para maratonar " + minhaSerie.getNome() + ": " + minhaSerie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -51,8 +50,7 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeNovo = new Filme();
-        filmeNovo.setNome("Dogville");
+        Filme filmeNovo = new Filme("Dogville");
         filmeNovo.setDuracaoEmMinutos(200);
         filmeNovo.setAnoDeLancamento(2003);
         filmeNovo.avalia(10);
